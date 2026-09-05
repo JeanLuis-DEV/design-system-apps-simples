@@ -20,7 +20,8 @@
     "**/*.css"
   ],
   "scripts": {
-    "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json"
+    "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json",
+    "prepare": "npm run build"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
