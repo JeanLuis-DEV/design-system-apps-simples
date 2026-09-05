@@ -1,11 +1,12 @@
 # Design System Apps Simples
 
 Biblioteca oficial de interface da família Apps Simples, em React + TypeScript e CSS.
-Pacote: `@apps-simples/ui`, versão inicial `0.1.0`.
+Pacote: `@apps-simples/ui`, versão `0.2.0` (MINOR pela inclusão dos componentes).
 Os aplicativos devem reutilizar esta biblioteca em vez de copiar componentes.
 
-Esta etapa contém somente a estrutura técnica. Os componentes ainda serão migrados
-do App Base; a API pública em `src/index.ts` ainda não exporta componentes.
+Componentes migrados do App Base: Alert, Button, Card, Input, Modal, OptionGroup,
+Select e Toast. A entrada pública exporta esses componentes e seus tipos de props,
+variantes, tamanhos e opções, preservando as APIs aprovadas no App Base.
 A instalação via Git/tag será configurada nas próximas etapas.
 
 ## Desenvolvimento e build
@@ -27,8 +28,8 @@ O pacote inclui somente `dist/` e os metadados/documentação incluídos pelo np
 
 ## CSS
 
-`src/styles/index.css` é a entrada de estilos, por enquanto sem regras visuais.
-Ela é uma entrada independente no build, mantendo a API TypeScript mínima.
+`src/styles/index.css` reúne os tokens, a base visual dos componentes, `fields.css`
+e os estilos dos oito componentes em uma entrada independente no build.
 O Vite extrai o CSS para `dist/style.css`, exposto como `@apps-simples/ui/style.css`.
 Quando a biblioteca for instalada, o aplicativo deverá importá-lo explicitamente:
 
@@ -38,6 +39,10 @@ import '@apps-simples/ui/style.css'
 
 Não há injeção automática de CSS nem plugin adicional.
 O campo `sideEffects` preserva os imports de CSS durante o tree shaking.
+Os imports de CSS foram retirados dos arquivos TSX e centralizados nessa entrada.
+`base.css` mantém o box sizing, a cor e a tipografia antes herdados da aplicação,
+com seletores limitados aos componentes, sem estilizar `body` ou `#root`.
+O aplicativo continua responsável pelo fundo da página e por disponibilizar a fonte Inter.
 Referência: [Vite Library Mode](https://vite.dev/guide/build.html#library-mode).
 
 ## Versionamento semântico

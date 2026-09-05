@@ -1,0 +1,10 @@
+.field__select {
+  padding-inline: var(--space-4);
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.field__select option {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}

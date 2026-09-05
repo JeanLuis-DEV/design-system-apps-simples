@@ -1,0 +1,55 @@
+.card {
+  width: 100%;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-container);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-elevated);
+}
+
+.card--interactive[role='button'] {
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+@media (hover: hover) {
+  .card--interactive[role='button']:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-surface-elevated);
+  }
+}
+
+.card--interactive[role='button']:active {
+  border-color: var(--color-border-subtle);
+  background: var(--color-surface-elevated);
+}
+
+.card--interactive[role='button']:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus);
+}
+
+.card--highlight {
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.card--alert {
+  border-color: var(--color-border-subtle);
+  border-inline-start-width: var(--space-1);
+  border-inline-start-color: var(--color-warning);
+  background: color-mix(in srgb, var(--color-warning) 6%, transparent);
+}
+
+.card--compact {
+  padding: var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--interactive[role='button'] {
+    transition: none;
+  }
+}

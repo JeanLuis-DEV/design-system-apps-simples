@@ -1,0 +1,105 @@
+.toast {
+  --toast-accent: var(--color-info);
+
+  position: fixed;
+  z-index: 1100;
+  right: max(var(--space-4), env(safe-area-inset-right, 0px));
+  bottom: max(var(--space-4), env(safe-area-inset-bottom, 0px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+  width: min(calc(100% - (2 * var(--space-4))), var(--modal-max-width));
+  min-height: var(--control-height);
+  border: 1px solid var(--color-border-subtle);
+  border-left: var(--space-1) solid var(--toast-accent);
+  border-radius: var(--radius-control);
+  padding-left: var(--space-4);
+  background: color-mix(in srgb, var(--toast-accent) 6%, var(--color-background));
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-elevated);
+  animation: toast-in 160ms ease-out;
+}
+
+.toast--success {
+  --toast-accent: var(--color-success);
+}
+
+.toast--error {
+  --toast-accent: var(--color-danger);
+}
+
+.toast--warning {
+  --toast-accent: var(--color-warning);
+}
+
+.toast--info {
+  --toast-accent: var(--color-info);
+}
+
+.toast--closing {
+  pointer-events: none;
+  animation: toast-out 150ms ease-in forwards;
+}
+
+.toast__message {
+  min-width: 0;
+  padding-block: var(--space-3);
+}
+
+.toast__close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: var(--touch-target-min);
+  height: var(--touch-target-min);
+  border: 0;
+  border-radius: var(--radius-control);
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: var(--font-size-xl);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.toast__close {
+  margin-right: var(--space-1);
+}
+
+@media (hover: hover) {
+  .toast__close:hover {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+}
+
+.toast__close:active {
+  background: var(--color-surface-elevated);
+}
+
+.toast__close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes toast-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast,
+  .toast--closing {
+    animation: none;
+  }
+}

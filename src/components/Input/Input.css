@@ -1,0 +1,8 @@
+.field__input[type='number'] {
+  appearance: textfield;
+}
+
+.field__input[type='number']::-webkit-inner-spin-button,
+.field__input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+}

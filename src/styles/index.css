@@ -1,1 +1,11 @@
-/* Entrada dos estilos da biblioteca. A migração ocorrerá em uma próxima etapa. */
+@import './tokens.css';
+@import '../components/fields.css';
+@import '../components/Alert/Alert.css';
+@import '../components/Button/Button.css';
+@import '../components/Card/Card.css';
+@import '../components/Input/Input.css';
+@import '../components/Modal/Modal.css';
+@import '../components/OptionGroup/OptionGroup.css';
+@import '../components/Select/Select.css';
+@import '../components/Toast/Toast.css';
+@import './base.css';

@@ -1,6 +1,6 @@
 {
   "name": "@apps-simples/ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Biblioteca de interface compartilhada da família Apps Simples.",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,8 +13,12 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json"
   },
