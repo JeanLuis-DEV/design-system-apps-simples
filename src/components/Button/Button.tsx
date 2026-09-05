@@ -20,10 +20,10 @@ export default function Button({
   ...buttonProps
 }: ButtonProps) {
   const classes = [
-    'button',
-    `button--${variant}`,
-    `button--${size}`,
-    loading && 'button--loading',
+    'as-button',
+    `as-button--${variant}`,
+    `as-button--${size}`,
+    loading && 'as-button--loading',
     className,
   ]
     .filter(Boolean)
@@ -37,8 +37,8 @@ export default function Button({
       disabled={disabled || loading}
       aria-busy={loading || undefined}
     >
-      {loading && <span className="button__spinner" aria-hidden="true" />}
-      <span className="button__label">{children}</span>
+      {loading && <span className="as-button__spinner" aria-hidden="true" />}
+      <span className="as-button__label">{children}</span>
     </button>
   )
 }

@@ -29,17 +29,17 @@ export default function Alert({
   dismissible = false,
   onDismiss,
 }: AlertProps) {
-  const classes = ['alert', `alert--${type}`, className].filter(Boolean).join(' ')
+  const classes = ['as-alert', `as-alert--${type}`, className].filter(Boolean).join(' ')
   const role = type === 'error' || type === 'warning' ? 'alert' : 'status'
 
   return (
     <div className={classes} role={role} aria-atomic="true">
-      <div className="alert__content">
-        {title != null && <strong className="alert__title">{title}</strong>}
-        <div className="alert__message">{children}</div>
+      <div className="as-alert__content">
+        {title != null && <strong className="as-alert__title">{title}</strong>}
+        <div className="as-alert__message">{children}</div>
       </div>
       {dismissible && (
-        <button className="alert__close" type="button" aria-label="Fechar aviso" onClick={onDismiss}>
+        <button className="as-alert__close" type="button" aria-label="Fechar aviso" onClick={onDismiss}>
           <span aria-hidden="true">×</span>
         </button>
       )}

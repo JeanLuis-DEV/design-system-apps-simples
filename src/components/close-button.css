@@ -1,0 +1,41 @@
+.as-alert__close,
+.as-modal__close,
+.as-toast__close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: var(--as-touch-target-min);
+  height: var(--as-touch-target-min);
+  border: 0;
+  border-radius: var(--as-radius-control);
+  padding: 0;
+  background: transparent;
+  color: var(--as-color-text-secondary);
+  font: inherit;
+  font-size: var(--as-font-size-xl);
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .as-alert__close:hover,
+  .as-modal__close:hover,
+  .as-toast__close:hover {
+    background: var(--as-color-surface);
+    color: var(--as-color-text-primary);
+  }
+}
+
+.as-alert__close:active,
+.as-modal__close:active,
+.as-toast__close:active {
+  background: var(--as-color-surface-elevated);
+}
+
+.as-alert__close:focus-visible,
+.as-modal__close:focus-visible,
+.as-toast__close:focus-visible {
+  outline: 2px solid var(--as-color-primary);
+  outline-offset: 2px;
+  box-shadow: var(--as-shadow-focus);
+}

@@ -24,39 +24,42 @@ export default function Input({
   const generatedId = useId()
   const inputId = id ?? generatedId
   const feedbackId = `${inputId}-feedback`
-  const describedBy = [ariaDescribedBy, (error || helperText) && feedbackId]
+  const hasError = error != null && error !== false
+  const hasHelperText = helperText != null && helperText !== false
+  const hasFeedback = hasError || hasHelperText
+  const describedBy = [ariaDescribedBy, hasFeedback && feedbackId]
     .filter(Boolean)
     .join(' ') || undefined
-  const classes = ['field', error && 'field--error', disabled && 'field--disabled', className]
+  const classes = ['as-field', hasError && 'as-field--error', disabled && 'as-field--disabled', className]
     .filter(Boolean)
     .join(' ')
 
   return (
     <div className={classes}>
-      <label className="field__label" htmlFor={inputId}>{label}</label>
-      <div className="field__control">
+      <label className="as-field__label" htmlFor={inputId}>{label}</label>
+      <div className="as-field__control">
         {prefix != null && (
-          <span className="field__adornment field__adornment--prefix" aria-hidden="true">{prefix}</span>
+          <span className="as-field__adornment as-field__adornment--prefix" aria-hidden="true">{prefix}</span>
         )}
         <input
           {...inputProps}
           id={inputId}
-          className="field__input"
+          className="as-field__input"
           disabled={disabled}
-          aria-invalid={error ? true : ariaInvalid}
+          aria-invalid={hasError ? true : ariaInvalid}
           aria-describedby={describedBy}
         />
         {suffix != null && (
-          <span className="field__adornment field__adornment--suffix" aria-hidden="true">{suffix}</span>
+          <span className="as-field__adornment as-field__adornment--suffix" aria-hidden="true">{suffix}</span>
         )}
       </div>
-      {(error || helperText) && (
+      {hasFeedback && (
         <span
           id={feedbackId}
-          className={`field__feedback${error ? ' field__feedback--error' : ''}`}
-          role={error ? 'alert' : undefined}
+          className={`as-field__feedback${hasError ? ' as-field__feedback--error' : ''}`}
+          role={hasError ? 'alert' : undefined}
         >
-          {error ?? helperText}
+          {hasError ? error : helperText}
         </span>
       )}
     </div>

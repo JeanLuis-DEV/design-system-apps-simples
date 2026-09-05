@@ -50,9 +50,9 @@ export default function Toast({
   if (!open || typeof document === 'undefined') return null
 
   const classes = [
-    'toast',
-    `toast--${type}`,
-    closing && 'toast--closing',
+    'as-toast',
+    `as-toast--${type}`,
+    closing && 'as-toast--closing',
     className,
   ]
     .filter(Boolean)
@@ -61,9 +61,9 @@ export default function Toast({
 
   return createPortal(
     <div className={classes} role={role} aria-atomic="true">
-      <span className="toast__message">{message}</span>
+      <span className="as-toast__message">{message}</span>
       <button
-        className="toast__close"
+        className="as-toast__close"
         type="button"
         aria-label="Fechar notificação"
         onClick={() => setClosing(true)}

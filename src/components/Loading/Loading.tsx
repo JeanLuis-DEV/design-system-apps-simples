@@ -15,17 +15,17 @@ export default function Loading({
   mode = 'inline',
   className,
 }: LoadingProps) {
-  const classes = ['loading', `loading--${size}`, `loading--${mode}`, className]
+  const classes = ['as-loading', `as-loading--${size}`, `as-loading--${mode}`, className]
     .filter(Boolean)
     .join(' ')
 
   return (
     <div className={classes} role="status" aria-live="polite" aria-atomic="true">
-      <span className="loading__spinner" aria-hidden="true" />
+      <span className="as-loading__spinner" aria-hidden="true" />
       {label ? (
-        <span className="loading__label">{label}</span>
+        <span className="as-loading__label">{label}</span>
       ) : (
-        <span className="loading__accessible-label">Carregando</span>
+        <span className="as-loading__accessible-label">Carregando</span>
       )}
     </div>
   )

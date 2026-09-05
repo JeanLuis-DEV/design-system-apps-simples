@@ -16,7 +16,7 @@ export default function ErrorState({
   action,
   className,
 }: ErrorStateProps) {
-  const classes = ['error-state', className].filter(Boolean).join(' ')
+  const classes = ['as-error-state', className].filter(Boolean).join(' ')
 
   return (
     <EmptyState

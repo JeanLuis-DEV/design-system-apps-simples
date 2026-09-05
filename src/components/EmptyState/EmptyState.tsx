@@ -15,20 +15,20 @@ export default function EmptyState({
   action,
   className,
 }: EmptyStateProps) {
-  const classes = ['empty-state', className].filter(Boolean).join(' ')
+  const classes = ['as-empty-state', className].filter(Boolean).join(' ')
 
   return (
     <div className={classes}>
       {icon != null && (
-        <div className="empty-state__icon" aria-hidden="true">
+        <div className="as-empty-state__icon" aria-hidden="true">
           {icon}
         </div>
       )}
-      <div className="empty-state__content">
-        <p className="empty-state__title">{title}</p>
-        {description != null && <p className="empty-state__description">{description}</p>}
+      <div className="as-empty-state__content">
+        <p className="as-empty-state__title">{title}</p>
+        {description != null && <p className="as-empty-state__description">{description}</p>}
       </div>
-      {action != null && <div className="empty-state__action">{action}</div>}
+      {action != null && <div className="as-empty-state__action">{action}</div>}
     </div>
   )
 }

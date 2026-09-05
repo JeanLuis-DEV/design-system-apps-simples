@@ -1,70 +1,70 @@
 :root {
   /* Marca */
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-primary: #CCAA4B;
-  --color-background: #262933;
-  --color-gray: #585858;
+  --as-color-white: #FFFFFF;
+  --as-color-black: #000000;
+  --as-color-primary: #CCAA4B;
+  --as-color-background: #262933;
+  --as-color-gray: #585858;
 
   /* Superfícies e bordas sobre o fundo principal */
-  --color-surface: rgb(255 255 255 / 4%);
-  --color-surface-elevated: rgb(255 255 255 / 8%);
-  --color-border-subtle: rgb(255 255 255 / 10%);
-  --color-border-strong: rgb(255 255 255 / 20%);
-  --color-overlay: rgb(0 0 0 / 60%);
+  --as-color-surface: rgb(255 255 255 / 4%);
+  --as-color-surface-elevated: rgb(255 255 255 / 8%);
+  --as-color-border-subtle: rgb(255 255 255 / 10%);
+  --as-color-border-strong: rgb(255 255 255 / 20%);
+  --as-color-overlay: rgb(0 0 0 / 60%);
 
   /* Texto: o tom discreto também atende ao placeholder aprovado. */
-  --color-text-primary: var(--color-white);
-  --color-text-secondary: rgb(255 255 255 / 70%);
-  --color-text-muted: rgb(255 255 255 / 45%);
-  --color-text-disabled: var(--color-gray);
-  --color-text-on-primary: var(--color-black);
+  --as-color-text-primary: var(--as-color-white);
+  --as-color-text-secondary: rgb(255 255 255 / 70%);
+  --as-color-text-muted: rgb(255 255 255 / 45%);
+  --as-color-text-disabled: var(--as-color-gray);
+  --as-color-text-on-primary: var(--as-color-black);
 
   /* Cores funcionais; danger atende a erro e perigo. */
-  --color-success: #4ADE80;
-  --color-info: #60A5FA;
-  --color-warning: #FBBF24;
-  --color-danger: #F87171;
+  --as-color-success: #4ADE80;
+  --as-color-info: #60A5FA;
+  --as-color-warning: #FBBF24;
+  --as-color-danger: #F87171;
 
   /* Tipografia */
-  --font-family-base: Inter, system-ui, "Segoe UI", Arial, sans-serif;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 18px;
-  --font-size-xl: 24px;
-  --font-size-2xl: 32px;
+  --as-font-family-base: Inter, system-ui, "Segoe UI", Arial, sans-serif;
+  --as-font-weight-regular: 400;
+  --as-font-weight-medium: 500;
+  --as-font-weight-semibold: 600;
+  --as-font-weight-bold: 700;
+  --as-font-size-xs: 12px;
+  --as-font-size-sm: 14px;
+  --as-font-size-md: 16px;
+  --as-font-size-lg: 18px;
+  --as-font-size-xl: 24px;
+  --as-font-size-2xl: 32px;
 
   /* Espaçamentos */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
+  --as-space-1: 4px;
+  --as-space-2: 8px;
+  --as-space-3: 12px;
+  --as-space-4: 16px;
+  --as-space-6: 24px;
+  --as-space-8: 32px;
 
   /* Raios: container compartilhado por cards e modais. */
-  --radius-control: 12px;
-  --radius-container: 16px;
+  --as-radius-control: 12px;
+  --as-radius-container: 16px;
 
   /* Controles compactos ainda precisam de área de toque mínima de 44px. */
-  --touch-target-min: 44px;
-  --control-height: 48px;
-  --control-height-compact: 40px;
-  --header-height: 60px;
+  --as-touch-target-min: 44px;
+  --as-control-height: 48px;
+  --as-control-height-compact: 40px;
+  --as-header-height: 60px;
 
   /* Sombras */
-  --shadow-elevated: 0 2px 8px rgb(0 0 0 / 16%);
-  --shadow-focus: 0 0 0 3px rgb(204 170 75 / 30%);
+  --as-shadow-elevated: 0 2px 8px rgb(0 0 0 / 16%);
+  --as-shadow-focus: 0 0 0 3px rgb(204 170 75 / 30%);
 
   /* Larguras máximas */
-  --content-max-width: 720px;
-  --content-max-width-wide: 1200px;
-  --modal-max-width: 420px;
+  --as-content-max-width: 720px;
+  --as-content-max-width-wide: 1200px;
+  --as-modal-max-width: 420px;
 
   /* Mobile: até 639px; tablet: 640–1023px; desktop: a partir de 1024px.
      Usar 640px e 1024px nas media queries; var() não funciona nas condições. */

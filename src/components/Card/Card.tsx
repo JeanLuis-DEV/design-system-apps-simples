@@ -30,12 +30,17 @@ export default function Card({
   ...cardProps
 }: CardProps) {
   const isInteractive = variant === 'interactive' && onClick != null
-  const classes = ['card', `card--${variant}`, className].filter(Boolean).join(' ')
+  const classes = ['as-card', `as-card--${variant}`, className].filter(Boolean).join(' ')
 
   function handleKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     onKeyDown?.(event)
 
-    if (!event.defaultPrevented && isInteractive && (event.key === 'Enter' || event.key === ' ')) {
+    if (
+      !event.defaultPrevented
+      && !event.repeat
+      && isInteractive
+      && (event.key === 'Enter' || event.key === ' ')
+    ) {
       event.preventDefault()
       event.currentTarget.click()
     }

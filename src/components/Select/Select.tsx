@@ -21,35 +21,38 @@ export default function Select({
   const generatedId = useId()
   const selectId = id ?? generatedId
   const feedbackId = `${selectId}-feedback`
-  const describedBy = [ariaDescribedBy, (error || helperText) && feedbackId]
+  const hasError = error != null && error !== false
+  const hasHelperText = helperText != null && helperText !== false
+  const hasFeedback = hasError || hasHelperText
+  const describedBy = [ariaDescribedBy, hasFeedback && feedbackId]
     .filter(Boolean)
     .join(' ') || undefined
-  const classes = ['field', error && 'field--error', disabled && 'field--disabled', className]
+  const classes = ['as-field', hasError && 'as-field--error', disabled && 'as-field--disabled', className]
     .filter(Boolean)
     .join(' ')
 
   return (
     <div className={classes}>
-      <label className="field__label" htmlFor={selectId}>{label}</label>
-      <div className="field__control">
+      <label className="as-field__label" htmlFor={selectId}>{label}</label>
+      <div className="as-field__control">
         <select
           {...selectProps}
           id={selectId}
-          className="field__select"
+          className="as-field__select"
           disabled={disabled}
-          aria-invalid={error ? true : ariaInvalid}
+          aria-invalid={hasError ? true : ariaInvalid}
           aria-describedby={describedBy}
         >
           {children}
         </select>
       </div>
-      {(error || helperText) && (
+      {hasFeedback && (
         <span
           id={feedbackId}
-          className={`field__feedback${error ? ' field__feedback--error' : ''}`}
-          role={error ? 'alert' : undefined}
+          className={`as-field__feedback${hasError ? ' as-field__feedback--error' : ''}`}
+          role={hasError ? 'alert' : undefined}
         >
-          {error ?? helperText}
+          {hasError ? error : helperText}
         </span>
       )}
     </div>

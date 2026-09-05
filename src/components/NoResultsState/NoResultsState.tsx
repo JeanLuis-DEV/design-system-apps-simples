@@ -16,7 +16,7 @@ export default function NoResultsState({
   action,
   className,
 }: NoResultsStateProps) {
-  const classes = ['no-results-state', className].filter(Boolean).join(' ')
+  const classes = ['as-no-results-state', className].filter(Boolean).join(' ')
 
   return (
     <EmptyState

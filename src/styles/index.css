@@ -1,5 +1,6 @@
 @import './tokens.css';
 @import '../components/fields.css';
+@import '../components/close-button.css';
 @import '../components/Alert/Alert.css';
 @import '../components/Button/Button.css';
 @import '../components/Card/Card.css';

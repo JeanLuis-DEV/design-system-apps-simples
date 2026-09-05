@@ -1,14 +1,14 @@
-.button {
+.as-button {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   border: 1px solid transparent;
-  border-radius: var(--radius-control);
-  padding-inline: var(--space-4);
+  border-radius: var(--as-radius-control);
+  padding-inline: var(--as-space-4);
   font: inherit;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--as-font-weight-semibold);
   line-height: 1.25;
   text-align: center;
   cursor: pointer;
@@ -19,115 +19,115 @@
     filter 120ms ease;
 }
 
-.button--default {
-  min-height: var(--control-height);
-  font-size: var(--font-size-md);
+.as-button--default {
+  min-height: var(--as-control-height);
+  font-size: var(--as-font-size-md);
 }
 
-.button--compact {
-  min-height: var(--control-height-compact);
-  padding-inline: var(--space-3);
-  font-size: var(--font-size-sm);
+.as-button--compact {
+  min-height: var(--as-control-height-compact);
+  padding-inline: var(--as-space-3);
+  font-size: var(--as-font-size-sm);
 }
 
-.button--primary {
-  background: var(--color-primary);
-  color: var(--color-text-on-primary);
+.as-button--primary {
+  background: var(--as-color-primary);
+  color: var(--as-color-text-on-primary);
 }
 
-.button--secondary {
-  border-color: var(--color-primary);
+.as-button--secondary {
+  border-color: var(--as-color-primary);
   background: transparent;
-  color: var(--color-primary);
+  color: var(--as-color-primary);
 }
 
-.button--ghost {
+.as-button--ghost {
   background: transparent;
-  color: var(--color-text-primary);
+  color: var(--as-color-text-primary);
 }
 
-.button--danger {
-  background: var(--color-danger);
-  color: var(--color-black);
+.as-button--danger {
+  background: var(--as-color-danger);
+  color: var(--as-color-black);
 }
 
 @media (hover: hover) {
-  .button--primary:hover:not(:disabled),
-  .button--danger:hover:not(:disabled) {
+  .as-button--primary:hover:not(:disabled),
+  .as-button--danger:hover:not(:disabled) {
     filter: brightness(1.08);
   }
 
-  .button--secondary:hover:not(:disabled) {
-    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  .as-button--secondary:hover:not(:disabled) {
+    background: color-mix(in srgb, var(--as-color-primary) 10%, transparent);
   }
 
-  .button--ghost:hover:not(:disabled) {
-    background: var(--color-surface);
+  .as-button--ghost:hover:not(:disabled) {
+    background: var(--as-color-surface);
   }
 }
 
-.button--primary:active:not(:disabled),
-.button--danger:active:not(:disabled) {
+.as-button--primary:active:not(:disabled),
+.as-button--danger:active:not(:disabled) {
   filter: brightness(0.92);
 }
 
-.button--secondary:active:not(:disabled) {
-  background: color-mix(in srgb, var(--color-primary) 16%, transparent);
+.as-button--secondary:active:not(:disabled) {
+  background: color-mix(in srgb, var(--as-color-primary) 16%, transparent);
 }
 
-.button--ghost:active:not(:disabled) {
-  background: var(--color-surface-elevated);
+.as-button--ghost:active:not(:disabled) {
+  background: var(--as-color-surface-elevated);
 }
 
-.button:focus-visible {
-  outline: 2px solid var(--color-primary);
+.as-button:focus-visible {
+  outline: 2px solid var(--as-color-primary);
   outline-offset: 2px;
-  box-shadow: var(--shadow-focus);
+  box-shadow: var(--as-shadow-focus);
 }
 
-.button:disabled:not(.button--loading) {
+.as-button:disabled:not(.as-button--loading) {
   filter: none;
   cursor: not-allowed;
   opacity: 0.45;
 }
 
-.button--loading {
+.as-button--loading {
   cursor: progress;
 }
 
-.button--loading .button__label {
-  transform: translateX(var(--space-2));
+.as-button--loading .as-button__label {
+  transform: translateX(var(--as-space-2));
 }
 
-.button__label {
+.as-button__label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.button__spinner {
+.as-button__spinner {
   position: absolute;
-  inset-inline-start: var(--space-2);
-  width: var(--space-3);
-  height: var(--space-3);
+  inset-inline-start: var(--as-space-2);
+  width: var(--as-space-3);
+  height: var(--as-space-3);
   border: 2px solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: button-spin 700ms linear infinite;
+  animation: as-button-spin 700ms linear infinite;
 }
 
-@keyframes button-spin {
+@keyframes as-button-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .button {
+  .as-button {
     transition: none;
   }
 
-  .button__spinner {
-    animation-duration: 1400ms;
+  .as-button__spinner {
+    animation: none;
   }
 }
