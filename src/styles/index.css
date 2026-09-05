@@ -3,7 +3,9 @@
 @import '../components/Alert/Alert.css';
 @import '../components/Button/Button.css';
 @import '../components/Card/Card.css';
+@import '../components/EmptyState/EmptyState.css';
 @import '../components/Input/Input.css';
+@import '../components/Loading/Loading.css';
 @import '../components/Modal/Modal.css';
 @import '../components/OptionGroup/OptionGroup.css';
 @import '../components/Select/Select.css';

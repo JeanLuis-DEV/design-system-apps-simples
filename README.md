@@ -1,12 +1,13 @@
 # Design System Apps Simples
 
 Biblioteca oficial de interface da família Apps Simples, em React + TypeScript e CSS.
-Pacote: `@apps-simples/ui`, versão `0.2.0` (MINOR pela inclusão dos componentes).
+Pacote: `@apps-simples/ui`, versão `0.3.0` (MINOR pela inclusão dos componentes).
 Os aplicativos devem reutilizar esta biblioteca em vez de copiar componentes.
 
 Componentes migrados do App Base: Alert, Button, Card, Input, Modal, OptionGroup,
 Select e Toast. A entrada pública exporta esses componentes e seus tipos de props,
 variantes, tamanhos e opções, preservando as APIs aprovadas no App Base.
+A biblioteca também fornece Loading, EmptyState, NoResultsState e ErrorState.
 A instalação via Git/tag será configurada nas próximas etapas.
 
 ## Desenvolvimento e build

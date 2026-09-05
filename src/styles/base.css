@@ -1,14 +1,14 @@
 /* Base antes herdada da aplicação, limitada aos componentes da biblioteca. */
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast),
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast) *,
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast)::before,
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast)::after,
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast) *::before,
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast) *::after {
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast),
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast) *,
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast)::before,
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast)::after,
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast) *::before,
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast) *::after {
   box-sizing: border-box;
 }
 
-:where(.alert, .button, .card, .field, .modal__overlay, .option-group, .toast) {
+:where(.alert, .button, .card, .empty-state, .field, .loading, .modal__overlay, .option-group, .toast) {
   color: var(--color-text-primary);
   font-family: var(--font-family-base);
   font-size: var(--font-size-md);
